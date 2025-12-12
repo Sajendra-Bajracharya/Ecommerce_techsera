@@ -81,7 +81,7 @@ include("config.php");
                   <h1>Techsera<br />Lorem ipsum dolor sit.</h1>
                   <p>
                     this is the change <br />
-                    atque eveniet eum nemo quod voluptatem amet distinctio asperiores?
+                    this is Techsera haah
                   </p>
                   <a href="shop.html" class="bannerbtn">Shope Now &#8594;</a>
                 </div>
