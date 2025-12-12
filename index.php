@@ -78,7 +78,7 @@ include("config.php");
             </nav>
               <div class="banner">
                 <div class="column">
-                  <h1>Techsera<br />Lorem ipsum dolor sit.</h1>
+                  <h1>Techsera<br />Lorem ipsum dolor techsera</h1>
                   <p>
                     this is the change <br />
                     this is Techsera haah
