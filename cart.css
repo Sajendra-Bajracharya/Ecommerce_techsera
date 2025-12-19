@@ -159,9 +159,146 @@ body {
   box-shadow: 0 2px 5px rgba(13, 110, 253, 0.3);
 }
 
+/* New Products and Discount Products - Horizontal Layout */
+#newProducts .pro-container,
+#discountProducts .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
+}
+
+#newProducts .pro,
+#discountProducts .pro {
+  background-color: white;
+  width: 23%;
+  min-width: 250px;
+  flex-shrink: 0;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin: 15px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#newProducts .pro:hover,
+#discountProducts .pro:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+#newProducts .pro img,
+#discountProducts .pro img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+#newProducts .pro img:hover,
+#discountProducts .pro img:hover {
+  transform: scale(1.05);
+}
+
+#newProducts .pro .des,
+#discountProducts .pro .des {
+  text-align: start;
+  padding: 15px 0 10px 0;
+  flex-grow: 1;
+}
+
+#newProducts .pro .des span,
+#discountProducts .pro .des span {
+  color: #606063;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#newProducts .pro .des h5,
+#discountProducts .pro .des h5 {
+  padding: 7px 0;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#newProducts .pro .des .star,
+#discountProducts .pro .des .star {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+#newProducts .pro .des .star i,
+#discountProducts .pro .des .star i {
+  color: #ffd700;
+}
+
+#newProducts .pro .des h4,
+#discountProducts .pro .des h4 {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#newProducts .pro button.cart,
+#discountProducts .pro button.cart {
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+#newProducts .pro button.cart:hover,
+#discountProducts .pro button.cart:hover {
+  background: linear-gradient(135deg, #0a58ca 0%, #084298 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+}
+
+#newProducts .pro button.cart:active,
+#discountProducts .pro button.cart:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(13, 110, 253, 0.3);
+}
+
+#newProducts,
+#discountProducts {
+  text-align: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   #Product1 .pro {
+    width: 48%;
+    min-width: 200px;
+  }
+  
+  #newProducts .pro-container,
+  #discountProducts .pro-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #newProducts .pro,
+  #discountProducts .pro {
     width: 48%;
     min-width: 200px;
   }
@@ -169,6 +306,11 @@ body {
 
 @media (max-width: 480px) {
   #Product1 .pro {
+    width: 100%;
+  }
+  
+  #newProducts .pro,
+  #discountProducts .pro {
     width: 100%;
   }
   

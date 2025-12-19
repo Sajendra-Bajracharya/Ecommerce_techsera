@@ -1,95 +1,51 @@
-#newsletter {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background-image: url("img/banner/b14.png");
-    background-repeat: no-repeat;
-    background-position: 20% 30%;
-   background-color: rgb(215, 215, 250);
-}
-#newsletter h4{
-    font-size: 22px;
-    font-weight: 700;
-    color: cyan;
-
+footer.section-p1 {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 60px;
+  gap: 30px;
+  justify-content: space-between;
+  font-family: 'Arial', sans-serif;
 }
 
-#newsletter p{
-    font-size: 14px;
-    font-weight: 600;
-    color:azure;
+footer .col {
+  flex: 1 1 250px;
 }
 
-#newsletter p span{
-    color:rgb(253, 255, 240);
+/* Logo */
+footer .logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-#newsletter .form{
-    display: flex;
-    width: 40%
+/* Headings: Contact, About, My Account */
+footer h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #f2f2f2; /* Lighter heading color */
+  border-bottom: 2px solid #e53935;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-#newsletter input{
-    height: 3.125rem;
-    padding: 0 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+/* Text & links */
+footer address,
+footer p,
+footer a {
+  font-size: 0.9rem;
+  color: #cccccc; /* FIXED: visible light gray */
+  text-decoration: none;
+  line-height: 1.6;
 }
 
-#newsletter button{
-    background-color: springgreen;
-    color: white;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+footer a:hover {
+  color: #e53935;
 }
 
-footer{
-    background-color: rgba(0, 0, 0, 0.696);
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
-}
-
-footer .col{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-
-}
-
-
-footer .logo {
-    margin-bottom: 30px;
-     
-}
-
-
-footer h4{
-    font-size: 14px;
-    padding-bottom: 20px;
-}
-
-
-footer p{
-    color: white;
-    font-size: 13px;
-    margin:0 0 8px 0;
-}
-
-footer a{
-    font-size: 13px;
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-}
-footer a:hover{
-    color: aliceblue;
+footer .col a {
+  display: block;
+  margin-bottom: 8px;
 }

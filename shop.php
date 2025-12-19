@@ -16,7 +16,14 @@ include("config.php");
       rel="stylesheet"
     />
     <link rel="icon" href="images/favcon.png" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" /> -->
+    
+    <!-- Bootstrap 5 CSS for cart UI, alerts, and modal -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -26,14 +33,17 @@ include("config.php");
     />
     <link
       rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- Custom CSS - style.css must come first for navbar consistency -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="cart.css" />
-    <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="shop.css">
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <!-- slider links -->
@@ -46,11 +56,12 @@ include("config.php");
     <section>
         <div class="header">
             <div class="container">
-              <nav>
+            <nav>
               <div class="navbar">
                 <div class="logo"><a href="index.php" style="text-decoration: none; color: inherit;">Techsera</a></div>
                 <div class="highlight">
-                  <li><a  href="index.php">Home</a></li>
+                  <ul id="navbar">
+                  <li><a href="index.php">Home</a></li>
                   <li><a class="active" href="shop.php">Shop</a></li>
                   <li><a href="about.html">About</a></li>
                   <li><a href="contact.html">Contact</a></li>
@@ -58,16 +69,23 @@ include("config.php");
                     <li><a href="account.php">Account</a></li>
                     <li><a href="logout.php">Logout</a></li>
                   <?php else: ?>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="register.php">Sign Up</a></li>
+                  <li><a href="login.php">Login</a></li>
+                  <li><a href="register.php">Sign Up</a></li>
                   <?php endif; ?>
-                  <li><div id="user">
-                        <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 0 </div></i></a>
-                    </div></li>
-                </div>
+                  <li id="shopcart" >
+                    <div id="user">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="fa-solid fa-bag-shopping ">
+                          <div id="badge">0</div>
+                        </i>
+                      </a>
+                    </div>
+                  </li>   
+                                
+                </ul>
                 </div>
               </div>
-              </nav>
+            </nav>
           </div>
 
 
@@ -100,52 +118,33 @@ include("config.php");
         }
     </script>
  <footer class="section-p1">
-      <div  class="col">
-         <!-- <img class="logo" src="img/logo.png" alt=""> -->
-         <div class="logo"><a href="index.php" style="text-decoration: none; color: inherit;">Techsera</a></div>
-         <h4>Contract</h4>
-         <address style="font-style: normal;">
-         <p>ADDRESS: <br> Terna College,Mumbai</p><br>
-         PHONE NO:<a href="tel:+91-9594725359">9594725359</a><br>
-         E-mail:<a href="mailto:msb1212004@gmail.com">msb1212004@gmail.com</a>
-         </address>
-         <p>TIME </BR> 10:00 - 18:00, Mon - Sat</p>
-         <div class="follow">
-            <h4>Follow us</h4>
-            <div class="icon">
-               <a href="https://www.facebook.com/profile.php?id=100059935246751" target="_blank"><i class="fab  fa-facebook-f"></i></a>
-               <a href="https://twitter.com/MaheshB47410026" target="_blank"><i class="fab  fa-twitter"></i></a>
-               <a href="https://www.instagram.com/maheshbhosale45/?next=%2F" target="_blank"><i class="fab  fa-instagram"></i></a>
-               <i class="fab  fa-pinterest"></i>
-               <i class="fab  fa-youtube"></i>
-               <a href="https://www.linkedin.com/in/mahesh-bhosale-ba7752257/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <div class="col">
+    <div class="logo"><a href="index.php" style="text-decoration: none; color: inherit;">Techsera</a></div>
+    <h4>Contact</h4>
+    <address style="font-style: normal;">
+      <p>ADDRESS: <br> Techsera, Kathmandu</p><br>
+    </address>
+    <p>TIME <br> 10:00 - 18:00, Mon - Sat</p>
+  </div>
 
-            </div>
-         </div>
-      </div>
-   
-      <div class="col">
-         <h4>About</h4>
-         <a href="about.html">About us</a>
-         <a href="#">Delivery Information</a>
-         <a href="#">Privacy Policy</a>
-         <a href="#">Terms & Conditions</a>
-         <a href="contact.html">Contact Us</a>
-      </div>
-   
-      <div class="col">
-         <h4>My Account</h4>
-         <a href="login.php">Sign In</a>
-         <a href="cart.html">View Cart</a>
-         <a href="#">My Wishlist</a>
-         <a href="#">Track My Order</a>
-         <a href="contact.html">Help</a>
-      </div>
-   
-      
-   
-      
-    </footer>
+  <div class="col">
+    <h4>About</h4>
+    <a href="about.html">About us</a>
+    <a href="#">Delivery Information</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <div class="col">
+    <h4>My Account</h4>
+    <a href="login.php">Sign In</a>
+    <a href="cart.html">View Cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="contact.html">Help</a>
+  </div>
+</footer>
    
    
       

@@ -18,6 +18,34 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
+// Navbar Active Link Highlighting
+(function() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.php';
+  const navLinks = document.querySelectorAll('#navbar li a');
+  
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    
+    // Remove active class from all links
+    link.classList.remove('active');
+    
+    // Add active class to current page
+    if (linkPage === currentPage || 
+        (currentPage === '' && linkPage === 'index.php') ||
+        (currentPage === 'index.php' && linkPage === 'index.php')) {
+      link.classList.add('active');
+    }
+    
+    // Add click animation
+    link.addEventListener('click', function(e) {
+      // Remove active from all siblings
+      navLinks.forEach(l => l.classList.remove('active'));
+      // Add active to clicked link
+      this.classList.add('active');
+    });
+  });
+})();
+
 // ------------------------
 // Simple Shopping Cart Logic
 // (script is loaded at the end of <body>, so DOM is already ready)
@@ -44,7 +72,8 @@ function showSlides() {
   }
 
   function formatCurrency(value) {
-    return "₹" + value.toLocaleString("en-IN", { minimumFractionDigits: 0 });
+    // Display prices in Nepali Rupees (NPR)
+    return "NPR " + value.toLocaleString("en-IN", { minimumFractionDigits: 0 });
   }
 
   function renderCart() {

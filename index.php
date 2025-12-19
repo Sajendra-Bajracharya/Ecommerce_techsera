@@ -8,7 +8,7 @@ include("config.php");
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doormart | Ecommerce Website Design</title>
+    <title>Techsera | Ecommerce Website Design</title>
     <link rel="icon" href="images/favcon.png" type="image/x-icon">
 
     <!-- Bootstrap 5 CSS for cart UI, alerts, and modal -->
@@ -62,7 +62,7 @@ include("config.php");
                 <div class="highlight">
                   <!-- <div class="menu-icon" id="menu-icon"><i class="bx bx-menu"></i></div> -->
                   <ul id="navbar">
-                  <li><a class="active" href="index.php"></a>Home</li>
+                  <li><a class="active" href="index.php">Home</a></li>
                   <li><a href="shop.php">Shop</a></li>
                   <li><a href="about.html">About</a></li>
                   <li><a href="contact.html">Contact</a></li>
@@ -89,15 +89,14 @@ include("config.php");
             </nav>
               <div class="banner">
                 <div class="column">
-                  <h1>Techsera<br />Lorem ipsum dolor techsera</h1>
+                  <h1>Smart Tech, Seamless Living.</h1>
                   <p>
-                    this is the change <br />
-                    this is Techsera haah
+                    Discover cutting-edge technology products built to simplify, enhance, and transform your everyday experience.
                   </p>
-                  <a href="shop.html" class="bannerbtn">Shope Now &#8594;</a>
+                  <a href="shop.php" class="bannerbtn">Shop Now &#8594;</a>
                 </div>
                 <div class="column">
-                  <img src="images/banner/banner.png" alt="" />
+                  <img src="img/Mobilehero.png" alt="Techsera - Smart Tech Products" />
                 </div>
               </div>
             </div>
@@ -107,27 +106,21 @@ include("config.php");
     <!-- NEW SLIDER -->
 
     <div class="slider">
-      <h2>advertisements</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+      <h2>Advertisements</h2>
+      <p>See the latest deals and offers in our store.</p>
     </div>
 
     <div class="slideshow-container">
       <div class="mySlides fade">
-        <!-- <div class="numbertext">1 / 3</div> -->
-        <img src="images/advertise/ad-1.jpg" style="width: 100%" />           
-        <!-- <div class="text">Caption Text</div> -->
+        <img src="img/b1.png" alt="Advertisement Banner 1" />
       </div>
 
       <div class="mySlides fade">
-        <!-- <div class="numbertext">2 / 3</div> -->
-        <img src="images/advertise/ad-2.jpg" style="width: 100%" />
-        <!-- <div class="text">Caption Two</div> -->
+        <img src="img/b2.png" alt="Advertisement Banner 2" />
       </div>
 
       <div class="mySlides fade">
-        <!-- <div class="numbertext">3 / 3</div> -->
-        <img src="images/advertise/ad-3.jpg" style="width: 100%" />
-        <!-- <div class="text">Caption Three</div> -->
+        <img src="img/banner3.jpg" alt="Advertisement Banner 3" />
       </div>
     </div>
     <br />
@@ -148,14 +141,14 @@ include("config.php");
     <!-- cart  -->
     
     <section id="Product1" class="section-p1">
-      <h2>Trending Product</h2>
-      <p>Summer Collection New Morden Design</p>
+      <h2>Trending Tech Products</h2>
+      <p>Latest gadgets and accessories for your digital lifestyle</p>
       <div class="pro-container">
-        <div class="pro" data-product-id="p1" data-product-name="xyz t shirt" data-product-price="999">
-          <img src="images/products/f1.jpg" alt="xyz t shirt" />
+        <div class="pro" data-product-id="p1" data-product-name="Wireless Earbuds" data-product-price="3999">
+          <img src="img/earbud1.jpeg" alt="Wireless Earbuds" />
           <div class="des">
-            <span>adidas</span>
-            <h5>xyz t shirt</h5>
+            <span>SoundPro</span>
+            <h5>Wireless Earbuds</h5>
             <div class="star">
               <i class="fas fa-star "></i>
               <i class="fas fa-star"></i>
@@ -163,17 +156,17 @@ include("config.php");
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>&#x20b9;999</h4>
+            <h4>NPR 3,999</h4>
           </div>
           <button type="button" class="btn btn-sm btn-primary mt-2 cart">
             Add to Cart
           </button>
         </div>
-        <div class="pro" data-product-id="p2" data-product-name="xyz t shirt" data-product-price="1799">
-          <img src="images/products/f2.jpg" alt="xyz t shirt" />
+        <div class="pro" data-product-id="p2" data-product-name="Gaming Laptop" data-product-price="89999">
+          <img src="img/laptop1.jpeg" alt="Gaming Laptop" />
           <div class="des">
-            <span>adidas</span>
-            <h5>xyz t shirt</h5>
+            <span>UltraGear</span>
+            <h5>Gaming Laptop</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -181,17 +174,17 @@ include("config.php");
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>&#x20b9;1799</h4>
+            <h4>NPR 89,999</h4>
           </div>
           <button type="button" class="btn btn-sm btn-primary mt-2 cart">
             Add to Cart
           </button>
         </div>
-        <div class="pro" data-product-id="p3" data-product-name="xyz t shirt" data-product-price="999">
-          <img src="images/products/f3.jpg" alt="xyz t shirt" />
+        <div class="pro" data-product-id="p3" data-product-name="Smart Watch" data-product-price="7999">
+          <img src="img/smartwatch1.jpeg" alt="Smart Watch" />
           <div class="des">
-            <span>adidas</span>
-            <h5>xyz t shirt</h5>
+            <span>TimeTech</span>
+            <h5>Smart Watch</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -199,17 +192,17 @@ include("config.php");
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>&#x20b9;999</h4>
+            <h4>NPR 7,999</h4>
           </div>
           <button type="button" class="btn btn-sm btn-primary mt-2 cart">
             Add to Cart
           </button>
         </div>
-        <div class="pro" data-product-id="p4" data-product-name="xyz t shirt" data-product-price="999">
-          <img src="images/products/f4.jpg" alt="xyz t shirt" />
+        <div class="pro" data-product-id="p4" data-product-name="Noise Cancelling Headphones" data-product-price="12999">
+          <img src="img/headphone1.jpeg" alt="Noise Cancelling Headphones" />
           <div class="des">
-            <span>adidas</span>
-            <h5>xyz t shirt</h5>
+            <span>QuietWave</span>
+            <h5>Noise Cancelling Headphones</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -217,17 +210,17 @@ include("config.php");
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>&#x20b9;999</h4>
+            <h4>NPR 12,999</h4>
           </div>
           <button type="button" class="btn btn-sm btn-primary mt-2 cart">
             Add to Cart
           </button>
         </div>
-        <div class="pro" data-product-id="p5" data-product-name="xyz t shirt" data-product-price="1999">
-          <img src="images/products/f5.jpg" alt="xyz t shirt" />
+        <div class="pro" data-product-id="p5" data-product-name="Smartphone" data-product-price="25999">
+          <img src="img/mobile1.jpeg" alt="Smartphone" />
           <div class="des">
-            <span>adidas</span>
-            <h5>xyz t shirt</h5>
+            <span>NeoMobile</span>
+            <h5>Smartphone</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -235,17 +228,17 @@ include("config.php");
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>&#x20b9;1999</h4>
+            <h4>NPR 25,999</h4>
           </div>
           <button type="button" class="btn btn-sm btn-primary mt-2 cart">
             Add to Cart
           </button>
         </div>
-        <div class="pro" data-product-id="p6" data-product-name="xyz t shirt" data-product-price="2999">
-          <img src="images/products/f6.jpg" alt="xyz t shirt" />
+        <div class="pro" data-product-id="p6" data-product-name="4K Action Camera" data-product-price="24999">
+          <img src="img/camera1.jpeg" alt="4K Action Camera" />
           <div class="des">
-            <span>adidas</span>
-            <h5>xyz t shirt</h5>
+            <span>AdventureCam</span>
+            <h5>4K Action Camera</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -253,17 +246,17 @@ include("config.php");
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>&#x20b9;2999</h4>
+            <h4>NPR 24,999</h4>
           </div>
           <button type="button" class="btn btn-sm btn-primary mt-2 cart">
             Add to Cart
           </button>
         </div>
-        <div class="pro" data-product-id="p7" data-product-name="xyz t shirt" data-product-price="7899">
-          <img src="images/products/f7.jpg" alt="xyz t shirt" />
+        <div class="pro" data-product-id="p7" data-product-name="Mechanical Keyboard" data-product-price="5999">
+          <img src="img/mk1.jpeg" alt="Mechanical Keyboard" />
           <div class="des">
-            <span>adidas</span>
-            <h5>xyz t shirt</h5>
+            <span>KeyCraft</span>
+            <h5>Mechanical Keyboard</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -271,17 +264,17 @@ include("config.php");
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>&#x20b9;7899</h4>
+            <h4>NPR 5,999</h4>
           </div>
           <button type="button" class="btn btn-sm btn-primary mt-2 cart">
             Add to Cart
           </button>
         </div>
-        <div class="pro" data-product-id="p8" data-product-name="xyz t shirt" data-product-price="999">
-          <img src="images/products/f8.jpg" alt="xyz t shirt" />
+        <div class="pro" data-product-id="p8" data-product-name="Bluetooth Speaker" data-product-price="4999">
+          <img src="img/bt1.jpeg" alt="Bluetooth Speaker" />
           <div class="des">
-            <span>adidas</span>
-            <h5>xyz t shirt</h5>
+            <span>BeatBox</span>
+            <h5>Bluetooth Speaker</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -289,7 +282,7 @@ include("config.php");
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>&#x20b9;999</h4>
+            <h4>NPR 4,999</h4>
           </div>
           <button type="button" class="btn btn-sm btn-primary mt-2 cart">
             Add to Cart
@@ -297,6 +290,186 @@ include("config.php");
         </div>
       </div>
     </section>
+
+    <!-- New Products Section -->
+    <section id="newProducts" class="section-p1">
+      <h2>New Products</h2>
+      <p>Fresh arrivals in your favorite gadgets</p>
+      <div class="pro-container">
+        <div class="pro" data-product-id="n1" data-product-name="Wireless Earbuds" data-product-price="3799">
+          <img src="img/earbud2.jpeg" alt="Wireless Earbuds" />
+          <div class="des">
+            <span>SoundPro</span>
+            <h5>Wireless Earbuds</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>NPR 3,799</h4>
+          </div>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
+        </div>
+        <div class="pro" data-product-id="n2" data-product-name="Gaming Laptop" data-product-price="92999">
+          <img src="img/laptop2.jpeg" alt="Gaming Laptop" />
+          <div class="des">
+            <span>UltraGear</span>
+            <h5>Gaming Laptop</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>NPR 92,999</h4>
+          </div>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
+        </div>
+        <div class="pro" data-product-id="n3" data-product-name="Smartphone" data-product-price="27999">
+          <img src="img/mobile2.jpeg" alt="Smartphone" />
+          <div class="des">
+            <span>NeoMobile</span>
+            <h5>Smartphone</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>NPR 27,999</h4>
+          </div>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
+        </div>
+        <div class="pro" data-product-id="n4" data-product-name="Smart Watch" data-product-price="8299">
+          <img src="img/smartwatch1.jpeg" alt="Smart Watch" />
+          <div class="des">
+            <span>TimeTech</span>
+            <h5>Smart Watch</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>NPR 8,299</h4>
+          </div>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discount Products Section -->
+<section id="discountProducts" class="section-p1">
+  <h2>Discount Products</h2>
+  <p>Grab these gadget deals before they are gone</p>
+  <div class="pro-container">
+    <div class="pro" data-product-id="d1" data-product-name="Noise Cancelling Headphones" data-product-price="10999" data-product-discount="20">
+      <img src="img/headphone2.jpeg" alt="Noise Cancelling Headphones" />
+      <div class="des">
+        <span>QuietWave</span>
+        <h5>Noise Cancelling Headphones</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h4>
+          <span class="old-price">NPR 13,749</span>
+          <span class="discount-price">NPR 10,999</span>
+          <span class="discount-percent">20% Off</span>
+        </h4>
+      </div>
+      <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="pro" data-product-id="d2" data-product-name="Mechanical Keyboard" data-product-price="5499" data-product-discount="15">
+      <img src="img/mk1.jpeg" alt="Mechanical Keyboard" />
+      <div class="des">
+        <span>KeyCraft</span>
+        <h5>Mechanical Keyboard</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h4>
+          <span class="old-price">NPR 6,470</span>
+          <span class="discount-price">NPR 5,499</span>
+          <span class="discount-percent">15% Off</span>
+        </h4>
+      </div>
+      <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="pro" data-product-id="d3" data-product-name="Bluetooth Speaker" data-product-price="4299" data-product-discount="10">
+      <img src="img/bt1.jpeg" alt="Bluetooth Speaker" />
+      <div class="des">
+        <span>BeatBox</span>
+        <h5>Bluetooth Speaker</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h4>
+          <span class="old-price">NPR 4,777</span>
+          <span class="discount-price">NPR 4,299</span>
+          <span class="discount-percent">10% Off</span>
+        </h4>
+      </div>
+      <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="pro" data-product-id="d4" data-product-name="4K Action Camera" data-product-price="21999" data-product-discount="10">
+      <img src="img/camera1.jpeg" alt="4K Action Camera" />
+      <div class="des">
+        <span>AdventureCam</span>
+        <h5>4K Action Camera</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h4>
+          <span class="old-price">NPR 24,443</span>
+          <span class="discount-price">NPR 21,999</span>
+          <span class="discount-percent">10% Off</span>
+        </h4>
+      </div>
+      <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</section>
+
                             <!-- footeer -->
     <!-- <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -310,53 +483,35 @@ include("config.php");
     </div>
     </section> -->
    
-    <footer class="section-p1">
-      <div  class="col">
-         <!-- <img class="logo" src="img/logo.png" alt=""> -->
-         <div class="logo"><a href="index.php" style="text-decoration: none; color: inherit;">Techsera</a></div>
-         <h4>Contract</h4>
-         <address style="font-style: normal;">
-         <p>ADDRESS: <br> Terna College,Mumbai</p><br>
-         PHONE NO:<a href="tel:+91-9594725359">9594725359</a><br>
-         E-mail:<a href="mailto:msb1212004@gmail.com">msb1212004@gmail.com</a>
-         </address>
-         <p>TIME </BR> 10:00 - 18:00, Mon - Sat</p>
-         <div class="follow">
-            <h4>Follow us</h4>
-            <div class="icon">
-               <a href="https://www.facebook.com/profile.php?id=100059935246751" target="_blank"><i class="fab  fa-facebook-f"></i></a>
-               <a href="https://twitter.com/MaheshB47410026" target="_blank"><i class="fab  fa-twitter"></i></a>
-               <a href="https://www.instagram.com/maheshbhosale45/?next=%2F" target="_blank"><i class="fab  fa-instagram"></i></a>
-               <i class="fab  fa-pinterest"></i>
-               <i class="fab  fa-youtube"></i>
-               <a href="https://www.linkedin.com/in/mahesh-bhosale-ba7752257/" target="_blank"><i class="fab fa-linkedin"></i></a>
+   <footer class="section-p1">
+  <div class="col">
+    <div class="logo"><a href="index.php" style="text-decoration: none; color: inherit;">Techsera</a></div>
+    <h4>Contact</h4>
+    <address style="font-style: normal;">
+      <p>ADDRESS: <br> Techsera, Kathmandu</p><br>
+    </address>
+    <p>TIME <br> 10:00 - 18:00, Mon - Sat</p>
+  </div>
 
-            </div>
-         </div>
-      </div>
-   
-      <div class="col">
-         <h4>About</h4>
-         <a href="about.html">About us</a>
-         <a href="#">Delivery Information</a>
-         <a href="#">Privacy Policy</a>
-         <a href="#">Terms & Conditions</a>
-         <a href="contact.html">Contact Us</a>
-      </div>
-   
-      <div class="col">
-         <h4>My Account</h4>
-         <a href="login.php">Sign In</a>
-         <a href="cart.html">View Cart</a>
-         <a href="#">My Wishlist</a>
-         <a href="#">Track My Order</a>
-         <a href="contact.html">Help</a>
-      </div>
-   
-      
-   
-      
-    </footer>
+  <div class="col">
+    <h4>About</h4>
+    <a href="about.html">About us</a>
+    <a href="#">Delivery Information</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <div class="col">
+    <h4>My Account</h4>
+    <a href="login.php">Sign In</a>
+    <a href="cart.html">View Cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="contact.html">Help</a>
+  </div>
+</footer>
+
 
     <!-- Cart Modal -->
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
@@ -389,7 +544,7 @@ include("config.php");
               <button type="button" class="btn btn-primary" id="checkoutBtn">Checkout</button>
             </div>
             <div class="fw-semibold ms-md-auto">
-              Total: <span id="cartTotal">₹0</span>
+              Total: <span id="cartTotal">NPR 0</span>
             </div>
           </div>
         </div>

@@ -8,12 +8,8 @@
 .container{
     height: 50vh;
 } */
-.navbar{
-    display:flex;   
-    background: radial-gradient(#cdedf0,#9fe1ea);
-    height: 70px;
-    /* margin-bottom: 20px; */
-}
+/* Navbar styles are now handled in style.css for consistency across all pages */
+/* Removed conflicting navbar styles */
 
 #shopbanner{
     height: 400px;
@@ -38,4 +34,55 @@
 {
     
     font-size: 30px;
+}
+footer.section-p1 {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 60px;
+  gap: 30px;
+  justify-content: space-between;
+  font-family: 'Arial', sans-serif;
+}
+
+footer .col {
+  flex: 1 1 250px;
+}
+
+/* Logo */
+footer .logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Headings: Contact, About, My Account */
+footer h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #f2f2f2; /* Lighter heading color */
+  border-bottom: 2px solid #e53935;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Text & links */
+footer address,
+footer p,
+footer a {
+  font-size: 0.9rem;
+  color: #cccccc; /* FIXED: visible light gray */
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+footer a:hover {
+  color: #e53935;
+}
+
+footer .col a {
+  display: block;
+  margin-bottom: 8px;
 }

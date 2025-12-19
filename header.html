@@ -15,27 +15,37 @@
 </head>
 <body>
     
-    <header>
-        <section>
-            <div class="container">
-                <div class="navbar">
-                  <div class="logo"><a href="index.php" style="text-decoration: none; color: inherit;">Techsera</a></div>
-                  <div class="highlight">
-                    <li><a  href="index.php">Home</a></li>
-                    <li><a  href="shop.php">Shop</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="account.php">account</a></li>
-                          </div>
-                    <!-- USER SECTION (CART AND USER ICON) -->
+    <nav>
+              <div class="navbar">
+                <div class="logo"><a href="index.php" style="text-decoration: none; color: inherit;">Techsera</a></div>
+                <div class="highlight">
+                  <!-- <div class="menu-icon" id="menu-icon"><i class="bx bx-menu"></i></div> -->
+                  <ul id="navbar">
+                  <li><a class="active" href="index.php">Home</a></li>
+                  <li><a href="shop.php">Shop</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <?php if(isset($_SESSION['valid'])): ?>
+                    <li><a href="account.php">Account</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                  <?php else: ?>
+                  <li><a href="login.php">Login</a></li>
+                  <li><a href="register.php">Sign Up</a></li>
+                  <?php endif; ?>
+                  <li id="shopcart" >
                     <div id="user">
-                       
-                        <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 0 </div></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="fa-solid fa-bag-shopping ">
+                          <div id="badge">0</div>
+                        </i>
+                      </a>
                     </div>
-            </div>
-
-        </section>
-    </header>
+                  </li>   
+                                
+                </ul>
+                </div>
+              </div>
+            </nav>
 
 </body>
 </html>
