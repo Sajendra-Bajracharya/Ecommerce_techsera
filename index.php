@@ -11,6 +11,11 @@ include("config.php");
     <title>Doormart | Ecommerce Website Design</title>
     <link rel="icon" href="images/favcon.png" type="image/x-icon">
 
+    <!-- Bootstrap 5 CSS for cart UI, alerts, and modal -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -65,12 +70,18 @@ include("config.php");
                     <li><a href="account.php">Account</a></li>
                     <li><a href="logout.php">Logout</a></li>
                   <?php else: ?>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="register.php">Sign Up</a></li>
+                  <li><a href="login.php">Login</a></li>
+                  <li><a href="register.php">Sign Up</a></li>
                   <?php endif; ?>
                   <li id="shopcart" >
                     <div id="user">
-                      <a href="cart.html"><i class="fa-solid fa-bag-shopping "><div id="badge"> 0 </div></i></a></div></li>   
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="fa-solid fa-bag-shopping ">
+                          <div id="badge">0</div>
+                        </i>
+                      </a>
+                    </div>
+                  </li>   
                                 
                 </ul>
                 </div>
@@ -127,14 +138,21 @@ include("config.php");
       <span class="dot"></span>
     </div>
 
+    <!-- Cart alert placeholder (side popup) -->
+    <div
+      id="cartAlertPlaceholder"
+      class="position-fixed top-0 end-0 p-3"
+      style="z-index: 1060; max-width: 320px;"
+    ></div>
+
     <!-- cart  -->
     
     <section id="Product1" class="section-p1">
-      <h2>Trending Froduct</h2>
+      <h2>Trending Product</h2>
       <p>Summer Collection New Morden Design</p>
       <div class="pro-container">
-        <div class="pro">
-          <img src="images/products/f1.jpg" alt="" />
+        <div class="pro" data-product-id="p1" data-product-name="xyz t shirt" data-product-price="999">
+          <img src="images/products/f1.jpg" alt="xyz t shirt" />
           <div class="des">
             <span>adidas</span>
             <h5>xyz t shirt</h5>
@@ -147,10 +165,12 @@ include("config.php");
             </div>
             <h4>&#x20b9;999</h4>
           </div>
-          <a href=""><i class="fas fa-shopping-cart cart"></i></a>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
         </div>
-        <div class="pro">
-          <img src="images/products/f2.jpg" alt="" />
+        <div class="pro" data-product-id="p2" data-product-name="xyz t shirt" data-product-price="1799">
+          <img src="images/products/f2.jpg" alt="xyz t shirt" />
           <div class="des">
             <span>adidas</span>
             <h5>xyz t shirt</h5>
@@ -163,10 +183,12 @@ include("config.php");
             </div>
             <h4>&#x20b9;1799</h4>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
         </div>
-        <div class="pro">
-          <img src="images/products/f3.jpg" alt="" />
+        <div class="pro" data-product-id="p3" data-product-name="xyz t shirt" data-product-price="999">
+          <img src="images/products/f3.jpg" alt="xyz t shirt" />
           <div class="des">
             <span>adidas</span>
             <h5>xyz t shirt</h5>
@@ -179,10 +201,12 @@ include("config.php");
             </div>
             <h4>&#x20b9;999</h4>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
         </div>
-        <div class="pro">
-          <img src="images/products/f4.jpg" alt="" />
+        <div class="pro" data-product-id="p4" data-product-name="xyz t shirt" data-product-price="999">
+          <img src="images/products/f4.jpg" alt="xyz t shirt" />
           <div class="des">
             <span>adidas</span>
             <h5>xyz t shirt</h5>
@@ -195,10 +219,12 @@ include("config.php");
             </div>
             <h4>&#x20b9;999</h4>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
         </div>
-        <div class="pro">
-          <img src="images/products/f5.jpg" alt="" />
+        <div class="pro" data-product-id="p5" data-product-name="xyz t shirt" data-product-price="1999">
+          <img src="images/products/f5.jpg" alt="xyz t shirt" />
           <div class="des">
             <span>adidas</span>
             <h5>xyz t shirt</h5>
@@ -211,10 +237,12 @@ include("config.php");
             </div>
             <h4>&#x20b9;1999</h4>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
         </div>
-        <div class="pro">
-          <img src="images/products/f6.jpg" alt="" />
+        <div class="pro" data-product-id="p6" data-product-name="xyz t shirt" data-product-price="2999">
+          <img src="images/products/f6.jpg" alt="xyz t shirt" />
           <div class="des">
             <span>adidas</span>
             <h5>xyz t shirt</h5>
@@ -227,10 +255,12 @@ include("config.php");
             </div>
             <h4>&#x20b9;2999</h4>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
         </div>
-        <div class="pro">
-          <img src="images/products/f7.jpg" alt="" />
+        <div class="pro" data-product-id="p7" data-product-name="xyz t shirt" data-product-price="7899">
+          <img src="images/products/f7.jpg" alt="xyz t shirt" />
           <div class="des">
             <span>adidas</span>
             <h5>xyz t shirt</h5>
@@ -243,10 +273,12 @@ include("config.php");
             </div>
             <h4>&#x20b9;7899</h4>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
         </div>
-        <div class="pro">
-          <img src="images/products/f8.jpg" alt="" />
+        <div class="pro" data-product-id="p8" data-product-name="xyz t shirt" data-product-price="999">
+          <img src="images/products/f8.jpg" alt="xyz t shirt" />
           <div class="des">
             <span>adidas</span>
             <h5>xyz t shirt</h5>
@@ -259,7 +291,9 @@ include("config.php");
             </div>
             <h4>&#x20b9;999</h4>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+          <button type="button" class="btn btn-sm btn-primary mt-2 cart">
+            Add to Cart
+          </button>
         </div>
       </div>
     </section>
@@ -323,9 +357,54 @@ include("config.php");
    
       
     </footer>
-   
-   
-   
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="cartEmptyMessage" class="text-muted">Your cart is empty.</div>
+            <div class="table-responsive d-none" id="cartTableWrapper">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-end">Subtotal</th>
+                    <th class="text-end">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="cartItems"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer flex-column flex-md-row justify-content-between align-items-stretch gap-2">
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-danger" id="clearCartBtn">Clear Cart</button>
+              <button type="button" class="btn btn-primary" id="checkoutBtn">Checkout</button>
+            </div>
+            <div class="fw-semibold ms-md-auto">
+              Total: <span id="cartTotal">₹0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Global flags for cart/checkout -->
+    <script>
+      window.IS_LOGGED_IN = <?php echo isset($_SESSION['valid']) ? 'true' : 'false'; ?>;
+      window.CHECKOUT_URL = 'checkout.php';
+      window.LOGIN_URL = 'login.php';
+    </script>
 
     <script src="script.js"></script>
   </body>

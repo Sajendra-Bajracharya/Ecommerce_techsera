@@ -8,12 +8,6 @@
 body{
     background: #e4e9f7;
 }
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 90vh;
-}
 .box{
     background: #fdfdfd;
     display: flex;

@@ -3,7 +3,7 @@
 $host = "localhost"; // or "127.0.0.1"
 $username = "root";
 $password = ""; // Default XAMPP password is empty
-$database = "techsera";
+$database = "login";
 $port = 3306; // Default MySQL port
 
 // Create connection
